@@ -9,11 +9,13 @@
 		<h1>kibiblog :3</h1>
 		<h2>5 October 2023</h2>
 	</div>
+	<div class="blog_border">
 	<div class="post">
 	<div class="indent">
 		<p>
 		I've just started trying this out. At the moment this is more a proof of
 		concept than anything else. All the same, I'll give it a shot.
+		</p>
 		<p>
 		Today I spent a great deal of time working on quietude (you can find it
 		on my github!). One mildly frustrating aspect of C that I'm still wrapping my head
@@ -21,12 +23,15 @@
 		far as I can tell, function parameters never leave the function scope. For
 		instance, in the case of the following:
 		</p>
-		<code><br>
-			void f(int x) {<br>
-				x++;<br>
-				return;<br>
-			}<br>
-		</code>
+	</div>
+	<div class="tty_border">
+	<div class="tty">
+		void f(int x) {<br>
+		&emsp;&emsp;x++;<br>
+		&emsp;&emsp;return;<br>
+		}<br>
+	</div>
+	</div>
 		<p>
 		the caller of <code>f()</code> never gets access to the incremented
 		argument. This is a little confusing to me but it makes sense. It's
@@ -46,6 +51,7 @@
 		that the specific variables will not be altered. And then in such cases as
 		you want a parameter to be altered, you just supply the pointer. It's cool!
 		</p>
+		<div class="indent">
 		<p>
 		In other news, I nabbed the neocities CLI. It works like a charm (even if
 		the github repo that arch uses is dreadfully outdated and I had to spend
@@ -59,6 +65,7 @@
 		<p>
 		I think that'll be all for today. Bye &lt;3
 		</p>
+	</div>
 	</div>
 	</div>
 </body>
