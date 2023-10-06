@@ -41,6 +41,10 @@ a:active {
   text-decoration: underline;
 }
 
+.indent {
+	text-indent: 40px;
+}
+
 .post {
 	display: block;
 	margin-left: 1em;

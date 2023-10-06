@@ -10,20 +10,24 @@
 		<h2>5 October 2023</h2>
 	</div>
 	<div class="post">
+	<div class="indent">
 		<p>
 		I've just started trying this out. At the moment this is more a proof of
-		concept than anything else. All the same, I'll give it a shot.<br>Today I
-		spent a great deal of time working on quietude (you can find it on my
-		github!). One mildly frustrating aspect of C that I'm still wrapping my head
+		concept than anything else. All the same, I'll give it a shot.
+		<p>
+		Today I spent a great deal of time working on quietude (you can find it
+		on my github!). One mildly frustrating aspect of C that I'm still wrapping my head
 		around is the way parameters and return values are treated in functions. As
 		far as I can tell, function parameters never leave the function scope. For
 		instance, in the case of the following:
-		<code>
-			void f(int x) {
-				x++;
-				return;
-			}
+		</p>
+		<code><br>
+			void f(int x) {<br>
+				x++;<br>
+				return;<br>
+			}<br>
 		</code>
+		<p>
 		the caller of <code>f()</code> never gets access to the incremented
 		argument. This is a little confusing to me but it makes sense. It's
 		consistent with the way C sees the world. This is where pointers come in!
@@ -55,6 +59,7 @@
 		<p>
 		I think that'll be all for today. Bye &lt;3
 		</p>
+	</div>
 	</div>
 </body>
 </html>
