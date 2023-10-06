@@ -1,0 +1,41 @@
+body {
+  background-color: rgb(20, 0, 20);
+  color: rgb(235, 235, 235);
+  font-family: Helvetica;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(235, 235, 235);
+  font-family: "Lucida Console";
+  text-align: center;
+}
+
+p {
+  color: rgb(235, 235, 235);
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+}
+
+a:link {
+  color: rgb(255, 50, 255);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(255, 175, 255);
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
