@@ -5,8 +5,10 @@
 	<link rel="icon" type="image/x-icon" href="shell_white.png">
 </head>
 <body>
-	<div class="center">
+	<div class="center">	
 		<h1>kibiblog :3</h1>
+	</div>	
+	<div class="blog_title">
 		<h2>5 October 2023</h2>
 	</div>
 	<div class="blog_border">
@@ -64,6 +66,28 @@
 		</p>
 		<p>
 		I think that'll be all for today. Bye &lt;3
+		</p>
+	</div>
+	</div>
+	</div>
+	<div class="blog_title">
+		<h2>10 October 2023</h2>
+	</div>
+	<div class="blog_border">
+	<div class="post">
+	<div class="indent">
+		<p>
+		Memory is such a miserable thing. The concept of making sure that there's
+		only ever one reference to a given piece of memory (or, naturally, otherwise
+		heavily documenting exceptions to this rule) does certainly make sense!
+		While working on Q today I was rewriting a bunch of stuff because I
+		misunderstood <code>splint</code>'s <code>/*@shared@*/</code> annotation.
+		Tragically it refers to proper garbage collection environments, which Q most
+		certainly is not. This means I've had to purge this annotation from my
+		program and (most especially) header files. Sad! Not of course that I don't
+		appreciate this; already my stricter approach has helped me spot a potential
+		memory leak that wasn't being handled properly. There's just so much work
+		and learning that goes into it, I suppose.
 		</p>
 	</div>
 	</div>
