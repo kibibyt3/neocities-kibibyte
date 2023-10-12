@@ -40,6 +40,10 @@ a:active {
 }
 
 code {
+	background-color: #301040;
+	border: solid 1px #502070;
+	border-radius: 5px;
+	padding: 2px;
 	font-family: monospace;
 	font-size: 135%;
 	font-weight: 900;
