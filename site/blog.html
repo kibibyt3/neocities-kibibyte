@@ -8,6 +8,8 @@
 	<div class="center">	
 		<h1>kibiblog :3</h1>
 	</div>	
+	
+
 	<div class="blog_title">
 		<h2>5 October 2023</h2>
 	</div>
@@ -70,6 +72,8 @@
 	</div>
 	</div>
 	</div>
+	
+
 	<div class="blog_title">
 		<h2>10 October 2023</h2>
 	</div>
@@ -92,6 +96,8 @@
 	</div>
 	</div>
 	</div>
+	
+
 	<div class="blog_title">
 		<h2>11 October 2023</h2>
 	</div>
@@ -126,6 +132,48 @@
 		the game and see and feel more tangible results, rather than interfaces
 		which interface with interfaces which interface with interfaces which
 		interface with interfaces which interface with interfaces...
+		</p>
+	</div>
+	</div>
+	</div>
+	
+	<div class="blog_title">
+		<h2>12 October 2023</h2>
+	</div>
+	<div class="blog_border">
+	<div class="post">
+	<div class="indent">
+		<p>
+		Hopefully going to make this one quick! I've stuff to do and spent ages with
+		Q today.
+		</p>
+		<p>
+		To begin, I finally (actually this time!) finished the rough draft of
+		qwalk. Some three quarters of today's work were spent fixing the logic in
+		<code>qwalk_logic_obj_move()</code>. The trouble was, I realised that,
+		because certain objects could move (e.g. the player!) we could have the same
+		square occupied by multiple objects. This much is actually acceptable!
+		However, what I didn't consider until just earlier was that, because the
+		amount of <code>QwalkObj_t</code> instances in a <code>QwalkLayer_t</code>
+		is strictly fixed against <code>QWALK_LAYER_SIZE</code>, to have a number of
+		elements that exceeds that even by one would yield either a segfault or
+		merely ignore whatever the final element to be added was. Because of this, I
+		had to make a conceptual split of the play area into two layers,
+		<code>layer_earth</code> and <code>layer_floater</code>. The former is the
+		ground (or earth) itself, and the latter the layer for objects which
+		<i>float</i> above the earth, or alternatively sit upon it. I had to add
+		some new functions (both <code>static</code> and <code>extern</code>!) in
+		order to account for this change.
+		</p>
+		<p>
+		That final quarter of my time was spent debugging qwalk. I only got so far
+		as managing to get it to compile without any warnings or errors (no small
+		feat considering I use a number of <code>gcc</code>'s <code>-W</code> flags
+		in my <code>Makefile</code>). In any case, what awaits me now is...
+		<i>shudders</i>... <i><font style="font-size: 80%">linting....</font></i>
+		</p>
+		<p>
+		Au revoir!
 		</p>
 	</div>
 	</div>
