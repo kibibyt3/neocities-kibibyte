@@ -178,5 +178,62 @@
 	</div>
 	</div>
 	</div>
+	<div class="blog_title">
+		<h2>19 October 2023</h2>
+	</div>
+	<div class="blog_border">
+	<div class="post">
+		<p>
+		Great news! qwalk's logic submodule is finally more or less complete. There
+		are still a few more tweaks that I can only really know how to make in
+		hindsight (i.e., when the rest of the module is completed) but for now I'm
+		quite happy with it.
+		</p>
+		<p>
+		That, dreadfully, is where my happiness ends. <code>splint</code> is quite
+		frustrating. I've spend the past few days trying to get it to stop
+		complaining about what is essentially one bug. Although I suspect there may
+		have actually been such a bug and although I suspect its advice may have
+		actually helped me, I wasted far more time on it than was necessary. I think
+		I misunderstand a basic principle about C. It seems that <code>splint</code>
+		only really knows how to analyze programs at compile-time. This is to say,
+		memory allocated at runtime is seemingly none of its business. Whence,
+		naturally, the <i>static</i> in static memory checker.
+		</p>
+		<p>
+		It was dreafully confusing, though! I accidentally left a now-incorrect
+		<code>owned</code> annotation on some struct member or other (namely a
+		struct that had a more-or-less equivalent setup to the trouble struct that
+		was causing <code>splint</code> to throw errors) which caused it to stop
+		throwing these errors. For this reason I thought that there was a genuine
+		issue with my implementation! After all, if the one dynamically-allocated
+		implemenation was free from this issues, whyever should this identical one
+		not be?
+		</p>
+		<p>
+		So it goes! The issue was discovered and dealt with by way of a few
+		well-placed </code>/*@i1@*/</code> annotations. I do find it troubling that
+		splint gets so confused by all of this! No doubt there is a solution but it
+		is one I am not privy to. Perhaps after more research I'll stumble upon
+		something, or better yet discover that my implementation was truly buggy!
+		For now, merely asking <code>splint</code> to ignore it shall suffice. It
+		did however feel like such a miserable waste of time. Too bad!
+		</p>
+		<p>
+		In other news: I've now begun work on the I/O submodule of qwalk. This
+		should cost substantially fewer headaches than its sister module,
+		<i>should</i> being the operative word here.
+		</p>
+		<p>
+		And in other other news: I finally got around (with oodles of generous help
+		from my darling girlfriend, Nyx) to getting my blood drawn. I've been off of
+		my HRT meds for terribly long on account of my nasty habit of kicking the
+		can down the road. No more! Once the work is done I shall have it sent to
+		them and they will give me those darling drugs which yield the most womanly
+		curves on my body once again, and that right soon!
+		</p>
+	</div>
+	</div>
+	</div>
 </body>
 </html>
